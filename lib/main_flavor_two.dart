@@ -2,8 +2,8 @@ import 'package:create_app_flavor/app.dart';
 import 'package:create_app_flavor/flavors.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp(
-    flavor: Flavor.flavorTwo,
-  ));
+Future<void> main() async {
+  FlavorValues.initialize(Flavor.flavorTwo);
+
+  runApp(const MyApp());
 }
