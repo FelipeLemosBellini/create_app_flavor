@@ -27,3 +27,9 @@ additional run args
 # build apk flavor command
 
 flutter build apk --flavor flavorOne -t .\lib\main_flavor_one.dart
+
+
+material help:
+https://www.youtube.com/watch?v=0YGogb6zMos
+https://www.youtube.com/watch?v=3tiy5M26H8c&pp=ygUWZmxhdm9yIGZsdXR0ZXIganVudGlvbg%3D%3D
+https://pub.dev/packages/flutter_flavorizr
