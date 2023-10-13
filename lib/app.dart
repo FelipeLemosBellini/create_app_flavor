@@ -1,4 +1,6 @@
 import 'package:create_app_flavor/flavors.dart';
+import 'package:create_app_flavor/helpers/flavor_colors.dart';
+import 'package:create_app_flavor/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -24,16 +26,21 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String applicationId = const String.fromEnvironment('applicationId');
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(backgroundColor: Theme.of(context).colorScheme.inversePrimary, title: Text(widget.title)),
-        body: Center(child: Column(
-          children: [
-            Text(applicationId),
-          ],
-        )));
+        appBar: AppBar(backgroundColor: FlavorColor.appBarColor, title: Text(widget.title)),
+        backgroundColor: FlavorColor.backgroundColor,
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          PrimaryButton(
+              onTapButton: () {},
+              textButton: "Enable Button style",
+              margin: const EdgeInsets.symmetric(horizontal: 16)),
+          PrimaryButton(
+              onTapButton: () {},
+              textButton: "Disable Button style",
+              disableButton: true,
+              margin: const EdgeInsets.only(top: 8, left: 16, right: 16))
+        ]));
   }
 }
